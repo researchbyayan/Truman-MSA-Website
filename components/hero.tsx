@@ -6,7 +6,7 @@ import { ArrowRight, CalendarDays, MapPin, Users, Heart } from "lucide-react";
 import { SITE } from "@/data/site";
 
 const glance = [
-  { icon: CalendarDays, title: "Jummah", sub: "Every Friday" },
+  { icon: CalendarDays, title: "Jumu'ah", sub: "Every Friday" },
   { icon: Heart, title: "Community", sub: "Events all semester" },
   { icon: Users, title: "Everyone Welcome", sub: "Muslim & non-Muslim" },
   { icon: MapPin, title: "Truman State", sub: "Kirksville, MO" },

@@ -52,39 +52,26 @@ export default function AboutPage() {
 
       {/* Mission */}
       <section className="section">
-        <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-          <SectionHeading eyebrow="Mission" title="Why we exist" />
+        <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+          <SectionHeading
+            eyebrow="Mission"
+            title="Why we exist"
+            description="We come together to worship, to learn, and to keep one another close to the deen while we are away from home."
+          />
           <Reveal delay={0.1}>
             <blockquote className="rounded-2xl border-l-4 border-brand-600 bg-brand-50/60 p-8">
               <p className="font-display text-xl leading-relaxed text-neutral-800 sm:text-2xl">
-                &ldquo;To support Muslim students in faith, education, and
-                community while promoting understanding, friendship, and
-                cooperation across the Truman community.&rdquo;
+                &ldquo;And hold firmly to the rope of Allah all together and do
+                not become divided.&rdquo;
               </p>
+              <footer className="mt-4 text-sm font-medium uppercase tracking-wide text-brand-700">
+                Qur&apos;an 3:103
+              </footer>
             </blockquote>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Guidance from the Qur'an */}
-      <section className="section">
-        <div className="container-page">
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow mb-4">Guidance</span>
-            <blockquote className="font-display text-xl leading-relaxed text-neutral-800 sm:text-2xl">
-              &ldquo;And hold firmly to the rope of Allah all together and do
-              not become divided.&rdquo;
-            </blockquote>
-            <p className="mt-3 text-sm text-neutral-500">
-              Qur&apos;an 3:103
-            </p>
-            <blockquote className="mt-8 font-display text-xl leading-relaxed text-neutral-800 sm:text-2xl">
-              &ldquo;O mankind, indeed We have created you from male and female
-              and made you peoples and tribes that you may know one
-              another.&rdquo;
-            </blockquote>
-            <p className="mt-3 text-sm text-neutral-500">
-              Qur&apos;an 49:13
+            <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg">
+              MSA supports Muslim students in faith, education, and community
+              while building understanding, friendship, and cooperation across
+              the Truman community.
             </p>
           </Reveal>
         </div>
@@ -165,6 +152,17 @@ export default function AboutPage() {
             title="Who can be part of MSA"
             description="Membership is open to all. Non-Muslim students are welcome to attend public activities and take part in the organization."
           />
+          <Reveal className="mt-8">
+            <figure className="mx-auto max-w-2xl text-center">
+              <blockquote className="font-display text-lg italic leading-relaxed text-neutral-700 sm:text-xl">
+                &ldquo;O mankind, We created you from a male and a female and
+                made you peoples and tribes that you may know one another.&rdquo;
+              </blockquote>
+              <figcaption className="mt-2 text-xs font-medium uppercase tracking-wide text-brand-700">
+                Qur&apos;an 49:13
+              </figcaption>
+            </figure>
+          </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
               {

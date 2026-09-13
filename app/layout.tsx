@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "MSA",
     "Truman State University",
     "Kirksville",
+    "Jumu'ah",
     "Jummah",
     "Muslim students",
     "Islam",
