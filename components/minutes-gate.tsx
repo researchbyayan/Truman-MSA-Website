@@ -66,7 +66,8 @@ function MeetingLinkPanel() {
     setUnlocked(false);
   }
 
-  function emailMeetingLink() {
+  function startAndEmailMeeting() {
+    window.open(MEETING_LINK, "_blank", "noopener,noreferrer");
     const to = OFFICER_EMAILS.join(",");
     const subject = encodeURIComponent(MEETING_EMAIL.subject);
     const body = encodeURIComponent(MEETING_EMAIL.body(MEETING_LINK));
@@ -86,7 +87,7 @@ function MeetingLinkPanel() {
             Admin (Officers only)
           </h2>
           <p className="mt-0.5 text-sm text-neutral-600">
-            Officer tools, starting with a one-click email of the meeting link.
+            One click opens the Google Meet and emails the link to every officer.
           </p>
         </div>
       </div>
@@ -94,17 +95,17 @@ function MeetingLinkPanel() {
       {unlocked ? (
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
           <button
-            onClick={emailMeetingLink}
+            onClick={startAndEmailMeeting}
             disabled={OFFICER_EMAILS.length === 0}
             className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
             title={
               OFFICER_EMAILS.length === 0
                 ? "Add officer emails in data/officers.ts"
-                : "Open your mail client to send the meeting link"
+                : "Open the Google Meet and email the link to every officer"
             }
           >
             <Mail className="h-4 w-4" />
-            Email Meeting Link
+            Start Meeting & Email Link
           </button>
           <button
             onClick={handleLogout}
