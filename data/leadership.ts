@@ -1,5 +1,5 @@
 /**
- * Executive Board, 2026–27 academic year.
+ * Executive Board, 2026-27 academic year.
  *
  * Only add fields you can verify. Leave optional fields undefined and the
  * leadership cards will simply omit them (no fake majors, bios, or emails).
@@ -16,20 +16,17 @@ export type Leader = {
   bio?: string;
   email?: string;
   photo?: string;
-  featured?: boolean; // slightly emphasized card (Advisor / President)
 };
 
 export const ADVISOR: Leader = {
   name: "Dr. Kafi Rahman",
   position: "Advisor",
-  featured: true,
 };
 
 export const EXECUTIVE_BOARD: Leader[] = [
   {
     name: "Mohammed Ayan Mahmood",
     position: "President",
-    featured: true,
   },
   {
     name: "Ahmed Begović",
