@@ -67,12 +67,14 @@ export function JummahSection() {
                 </li>
               </ul>
               <a
-                href="#jummah"
+                href={FRIDAY_PRAYER_SCHEDULE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary mt-6 w-full"
-                aria-label="Campus Jummah details"
+                aria-label="Open the Friday Prayer Schedule"
               >
                 <CalendarDays className="h-4 w-4" />
-                Campus Jummah
+                Friday Prayer Schedule
               </a>
             </div>
           </Reveal>

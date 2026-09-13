@@ -30,7 +30,7 @@ function formatDate(iso: string) {
   });
 }
 
-export function MinutesGate() {
+function MeetingLinkPanel() {
   const [unlocked, setUnlocked] = useState(false);
   const [ready, setReady] = useState(false);
   const [input, setInput] = useState("");
@@ -55,7 +55,7 @@ export function MinutesGate() {
       setError("");
       setInput("");
     } else {
-      setError("Incorrect password. Try again.");
+      setError("Incorrect password.");
     }
   }
 
@@ -75,61 +75,24 @@ export function MinutesGate() {
 
   if (!ready) return null;
 
-  if (!unlocked) {
-    return (
-      <section className="section">
-        <div className="container-page">
-          <Reveal>
-            <form
-              onSubmit={handleSubmit}
-              className="mx-auto max-w-md rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm"
-            >
-              <div className="flex flex-col items-center text-center">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
-                  <Lock className="h-6 w-6" />
-                </span>
-                <h2 className="mt-4 font-display text-2xl font-semibold text-neutral-900">
-                  Members Only
-                </h2>
-                <p className="mt-2 text-sm text-neutral-600">
-                  Enter the MSA members password to view meeting minutes.
-                </p>
-              </div>
-
-              <label className="mt-6 block text-sm font-medium text-neutral-700">
-                Password
-                <input
-                  type="password"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  autoFocus
-                  className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 text-neutral-900 shadow-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
-                  placeholder="••••••••"
-                />
-              </label>
-
-              {error && (
-                <p className="mt-2 text-sm text-red-600">{error}</p>
-              )}
-
-              <button type="submit" className="btn-primary mt-5 w-full">
-                Log in
-              </button>
-            </form>
-          </Reveal>
-        </div>
-      </section>
-    );
-  }
-
-  const minutes = [...MEETING_MINUTES].sort((a, b) =>
-    b.date.localeCompare(a.date)
-  );
-
   return (
-    <section className="section">
-      <div className="container-page">
-        <div className="mx-auto mb-6 flex max-w-3xl flex-wrap items-center justify-between gap-3">
+    <div className="mx-auto max-w-3xl rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+      <div className="flex items-start gap-3">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+          <Video className="h-5 w-5" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <h2 className="font-display text-lg font-semibold text-neutral-900">
+            Meeting Link (Officers only)
+          </h2>
+          <p className="mt-0.5 text-sm text-neutral-600">
+            One-click email of the Google Meet link to every officer.
+          </p>
+        </div>
+      </div>
+
+      {unlocked ? (
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
           <button
             onClick={emailMeetingLink}
             disabled={OFFICER_EMAILS.length === 0}
@@ -140,9 +103,8 @@ export function MinutesGate() {
                 : "Open your mail client to send the meeting link"
             }
           >
-            <Video className="h-4 w-4" />
-            Email Meeting Link
             <Mail className="h-4 w-4" />
+            Email Meeting Link
           </button>
           <button
             onClick={handleLogout}
@@ -151,6 +113,42 @@ export function MinutesGate() {
             Log out
           </button>
         </div>
+      ) : (
+        <form
+          onSubmit={handleSubmit}
+          className="mt-4 flex flex-wrap items-start gap-2"
+        >
+          <div className="flex flex-1 items-center gap-2 rounded-xl border border-neutral-300 bg-white px-3 py-2 focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-200">
+            <Lock className="h-4 w-4 text-neutral-400" />
+            <input
+              type="password"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Officer password"
+              className="min-w-0 flex-1 bg-transparent text-sm text-neutral-900 outline-none"
+            />
+          </div>
+          <button type="submit" className="btn-primary">
+            Unlock
+          </button>
+          {error && (
+            <p className="w-full text-sm text-red-600">{error}</p>
+          )}
+        </form>
+      )}
+    </div>
+  );
+}
+
+export function MinutesGate() {
+  const minutes = [...MEETING_MINUTES].sort((a, b) =>
+    b.date.localeCompare(a.date)
+  );
+
+  return (
+    <section className="section">
+      <div className="container-page space-y-10">
+        <MeetingLinkPanel />
 
         {minutes.length > 0 ? (
           <div className="mx-auto max-w-3xl space-y-4">
@@ -195,7 +193,7 @@ export function MinutesGate() {
               </h2>
               <p className="mx-auto mt-2 max-w-md text-neutral-600">
                 Executive Board meeting minutes will be posted here as they
-                become available. Check back after upcoming meetings.
+                become available.
               </p>
             </div>
           </Reveal>

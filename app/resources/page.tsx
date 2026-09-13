@@ -65,7 +65,7 @@ const resources: Resource[] = [
     icon: CalendarRange,
     title: "Fall 2026 Planner",
     description: "Everything MSA has planned for the semester, in one place.",
-    href: "/planner",
+    href: "/events",
     cta: "Open Planner",
   },
   {
