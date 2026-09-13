@@ -14,21 +14,12 @@ export function JummahSection() {
           <p className="mt-4 text-lg text-neutral-600">
             Muslims gather each Friday for Jumu&apos;ah. Join us on campus or at the Islamic Center.
           </p>
-          <a
-            href={FRIDAY_PRAYER_SCHEDULE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-900 hover:underline"
-          >
-            Friday Prayer Schedule
-            <ExternalLink className="h-3.5 w-3.5" />
-          </a>
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
           {/* Campus */}
           <Reveal>
-            <div className="card h-full border-brand-200 bg-gradient-to-br from-brand-50 to-white">
+            <div className="card flex h-full flex-col border-brand-200 bg-gradient-to-br from-brand-50 to-white">
               <span className="eyebrow">{campus.label}</span>
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-display text-2xl font-bold text-brand-900">
@@ -39,7 +30,7 @@ export function JummahSection() {
                   {campus.time}
                 </span>
               </div>
-              <ul className="mt-5 space-y-3 text-sm text-neutral-700">
+              <ul className="mt-5 flex-1 space-y-3 text-sm text-neutral-700">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
                   <span>
@@ -81,7 +72,7 @@ export function JummahSection() {
 
           {/* Community */}
           <Reveal delay={0.1}>
-            <div className="card h-full">
+            <div className="card flex h-full flex-col">
               <span className="eyebrow">{community.label}</span>
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-display text-2xl font-bold text-neutral-900">
@@ -92,7 +83,7 @@ export function JummahSection() {
                   {community.time}
                 </span>
               </div>
-              <ul className="mt-5 space-y-3 text-sm text-neutral-700">
+              <ul className="mt-5 flex-1 space-y-3 text-sm text-neutral-700">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
                   <span>
