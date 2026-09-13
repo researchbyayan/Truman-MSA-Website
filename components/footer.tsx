@@ -82,10 +82,10 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Jummah */}
+        {/* Jumu'ah */}
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-            Jummah
+            Jumu&apos;ah
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-neutral-400">
             <li>

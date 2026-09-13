@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Helpful resources for Muslim students at Truman State University, Jummah, the Islamic Center of Kirksville, the MSA Constitution, and more.",
+    "Helpful resources for Muslim students at Truman State University, Jumu'ah, the Islamic Center of Kirksville, the MSA Constitution, and more.",
 };
 
 type Resource = {
@@ -38,7 +38,7 @@ type Resource = {
 const resources: Resource[] = [
   {
     icon: CalendarDays,
-    title: "Jummah",
+    title: "Jumu'ah",
     description: `Campus: ${JUMMAH.campus.day} ${JUMMAH.campus.time}, Interfaith Center. ICK: ${JUMMAH.community.day} ${JUMMAH.community.time}.`,
     href: "/#jummah",
     cta: "Prayer Times",

@@ -8,7 +8,7 @@ import {
   ClipboardList,
   Lock,
   Mail,
-  Video,
+  ShieldCheck,
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { MEETING_MINUTES } from "@/data/minutes";
@@ -79,14 +79,14 @@ function MeetingLinkPanel() {
     <div className="mx-auto max-w-3xl rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
       <div className="flex items-start gap-3">
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
-          <Video className="h-5 w-5" />
+          <ShieldCheck className="h-5 w-5" />
         </span>
         <div className="min-w-0 flex-1">
           <h2 className="font-display text-lg font-semibold text-neutral-900">
-            Meeting Link (Officers only)
+            Admin (Officers only)
           </h2>
           <p className="mt-0.5 text-sm text-neutral-600">
-            One-click email of the Google Meet link to every officer.
+            Officer tools, starting with a one-click email of the meeting link.
           </p>
         </div>
       </div>

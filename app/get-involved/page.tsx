@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const ways = [
-  { icon: CalendarCheck, text: "Attend events and Jummah" },
+  { icon: CalendarCheck, text: "Attend events and Jumu'ah" },
   { icon: MessageCircle, text: "Join the GroupMe" },
   { icon: Instagram, text: "Follow us on Instagram" },
   { icon: HandHeart, text: "Volunteer at events" },

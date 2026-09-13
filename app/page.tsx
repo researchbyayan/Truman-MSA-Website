@@ -8,6 +8,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { Hero } from "@/components/hero";
+import { VerseMarquee } from "@/components/verse-marquee";
 import { JummahSection } from "@/components/jummah-section";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
@@ -28,7 +29,10 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* 3. Quick Jummah info */}
+      {/* Scrolling Qur'an verses */}
+      <VerseMarquee />
+
+      {/* Quick Jumu'ah info */}
       <JummahSection />
 
       {/* 4. Welcome / Mission */}
