@@ -29,8 +29,7 @@ export const MEETING_LINK = "https://meet.google.com/";
  * with all of these pre-filled as recipients.
  */
 export const OFFICER_EMAILS: string[] = [
-  // "president@example.com",
-  // "vp@example.com",
+  "es65721@truman.edu",
 ];
 
 /**
