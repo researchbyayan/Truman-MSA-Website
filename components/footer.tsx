@@ -4,7 +4,7 @@ import { SITE, SOCIAL_LINKS, JUMMAH, NAV_LINKS } from "@/data/site";
 import { LogoMark } from "@/components/logo";
 
 const quickLinks = NAV_LINKS.filter((l) =>
-  ["/about", "/events", "/planner", "/leadership", "/committees", "/resources"].includes(
+  ["/about", "/events", "/committees", "/resources"].includes(
     l.href
   )
 );

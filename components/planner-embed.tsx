@@ -1,4 +1,4 @@
-import { ExternalLink, CalendarPlus } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { PLANNER } from "@/data/site";
 
 /**
@@ -30,20 +30,6 @@ export function PlannerEmbed({
           >
             <ExternalLink className="h-4 w-4" />
             Open Full Planner
-          </a>
-          <a
-            href={PLANNER.calendarUrl || PLANNER.externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-            title={
-              PLANNER.calendarUrl
-                ? "Add MSA events to your calendar"
-                : "Calendar sync coming soon, opens the planner for now"
-            }
-          >
-            <CalendarPlus className="h-4 w-4" />
-            Add MSA Events to Your Calendar
           </a>
         </div>
       )}

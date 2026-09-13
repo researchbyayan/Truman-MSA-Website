@@ -18,7 +18,7 @@ import { UPCOMING_EVENTS } from "@/data/events";
 import { ACTIVE_COMMITTEES } from "@/data/committees";
 import { EXECUTIVE_BOARD, ADVISOR } from "@/data/leadership";
 import { FAQ } from "@/data/faq";
-import { LeaderCard } from "@/components/leader-card";
+import { BoardMarquee } from "@/components/board-marquee";
 import { PlannerEmbed } from "@/components/planner-embed";
 import { InstagramGrid } from "@/components/instagram-embed";
 import { RECAP_POSTS, INSTAGRAM_URL, INSTAGRAM_HANDLE } from "@/data/recap";
@@ -176,28 +176,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Executive Board preview */}
+      {/* 9. Executive Board */}
       <section className="section geo-bg">
         <div className="container-page">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <SectionHeading
-              eyebrow="Leadership"
-              title="Meet the Executive Board"
-              description="The students serving MSA for the 2026-27 academic year."
-            />
-            <Reveal>
-              <Link href="/leadership" className="btn-secondary">
-                Full Board
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Reveal>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[ADVISOR, ...EXECUTIVE_BOARD].slice(0, 4).map((leader, i) => (
-              <Reveal key={leader.name} delay={i * 0.06}>
-                <LeaderCard leader={leader} />
-              </Reveal>
-            ))}
+          <SectionHeading
+            center
+            eyebrow="Leadership"
+            title="Meet the Executive Board"
+            description="The students serving MSA for the 2026-27 academic year."
+          />
+          <div className="mt-10">
+            <BoardMarquee members={[ADVISOR, ...EXECUTIVE_BOARD]} />
           </div>
         </div>
       </section>
@@ -213,7 +202,7 @@ export default function HomePage() {
           />
           <div className="mx-auto mt-10 grid max-w-3xl gap-6 sm:grid-cols-2">
             <Reveal>
-              <div className="card flex items-start gap-4">
+              <div className="card flex h-full items-start gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
                   <BookOpen className="h-5 w-5" />
                 </div>
@@ -229,7 +218,7 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="card flex items-start gap-4">
+              <div className="card flex h-full items-start gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
                   <Building2 className="h-5 w-5" />
                 </div>

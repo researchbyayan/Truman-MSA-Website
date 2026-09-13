@@ -66,6 +66,30 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Guidance from the Qur'an */}
+      <section className="section">
+        <div className="container-page">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <span className="eyebrow mb-4">Guidance</span>
+            <blockquote className="font-display text-xl leading-relaxed text-neutral-800 sm:text-2xl">
+              &ldquo;And hold firmly to the rope of Allah all together and do
+              not become divided.&rdquo;
+            </blockquote>
+            <p className="mt-3 text-sm text-neutral-500">
+              Qur&apos;an 3:103
+            </p>
+            <blockquote className="mt-8 font-display text-xl leading-relaxed text-neutral-800 sm:text-2xl">
+              &ldquo;O mankind, indeed We have created you from male and female
+              and made you peoples and tribes that you may know one
+              another.&rdquo;
+            </blockquote>
+            <p className="mt-3 text-sm text-neutral-500">
+              Qur&apos;an 49:13
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Purpose */}
       <section className="section geo-bg">
         <div className="container-page">
@@ -98,7 +122,7 @@ export default function AboutPage() {
           />
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <Reveal>
-              <div className="card flex items-start gap-4">
+              <div className="card flex h-full items-start gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
                   <Building2 className="h-5 w-5" />
                 </div>
@@ -114,7 +138,7 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="card flex items-start gap-4">
+              <div className="card flex h-full items-start gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
                   <BookOpen className="h-5 w-5" />
                 </div>
@@ -231,7 +255,7 @@ export default function AboutPage() {
         title="Come as you are."
         description="Whether you're looking for community or just curious to learn, there's a place for you."
         primary={{ label: "Get Involved", href: "/get-involved" }}
-        secondary={{ label: "Meet the Board", href: "/leadership" }}
+        secondary={{ label: "See Committees", href: "/committees" }}
       />
     </>
   );
