@@ -47,7 +47,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="About Truman MSA"
-        description={`MSA is a student organization serving the ${SITE.university} community, a home for Muslim students and a welcoming space for anyone eager to learn.`}
+        description={`A student organization at ${SITE.university} rooted in Islam, serving Muslim students and open to anyone eager to learn.`}
       />
 
       {/* Mission */}
@@ -139,17 +139,13 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Membership"
             title="Who can be part of MSA"
-            description="Membership is open and welcoming. Non-Muslim students are warmly invited to attend applicable public activities and engage with the organization."
+            description="Membership is open to all. Non-Muslim students are welcome to attend public activities and take part in the organization."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
               {
                 title: "Regular Membership",
                 text: "Muslim Truman students, their spouses, and Muslim faculty and staff.",
-              },
-              {
-                title: "Honorary Membership",
-                text: "Truman Muslim alumni and Muslims residing in the Greater Kirksville area.",
               },
               {
                 title: "Associate Membership",
@@ -157,7 +153,7 @@ export default function AboutPage() {
               },
             ].map((m, i) => (
               <Reveal key={m.title} delay={i * 0.06}>
-                <div className="card h-full">
+                <div className="card flex h-full min-h-[10rem] flex-col">
                   <h3 className="font-display text-lg font-semibold text-brand-800">
                     {m.title}
                   </h3>
@@ -173,10 +169,9 @@ export default function AboutPage() {
               <span className="font-semibold text-neutral-900">
                 A note on voting:
               </span>{" "}
-              Voting privileges are reserved for currently enrolled Truman State
-              University students in accordance with the MSA Constitution.
-              Everyone is still welcome to participate in the life of the
-              community.
+              Voting privileges are reserved for currently enrolled Truman
+              State University students, in accordance with the MSA
+              Constitution.
             </div>
           </Reveal>
         </div>

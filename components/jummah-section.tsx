@@ -9,10 +9,10 @@ export function JummahSection() {
     <section id="jummah" className="section geo-bg">
       <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow mb-4">Friday Prayer</span>
-          <h2 className="section-title">Jummah at Truman &amp; in Kirksville</h2>
+          <span className="eyebrow mb-4">Jumu&apos;ah</span>
+          <h2 className="section-title">The Friday Prayer at Truman and in Kirksville</h2>
           <p className="mt-4 text-lg text-neutral-600">
-            Looking for Friday prayer? Here&apos;s everything you need.
+            Muslims gather each Friday for Jumu&apos;ah. Join us on campus or at the Islamic Center.
           </p>
           <a
             href={FRIDAY_PRAYER_SCHEDULE_URL}

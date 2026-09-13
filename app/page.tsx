@@ -183,7 +183,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Leadership"
               title="Meet the Executive Board"
-              description="The students serving MSA during the 2026–27 academic year."
+              description="The students serving MSA for the 2026-27 academic year."
             />
             <Reveal>
               <Link href="/leadership" className="btn-secondary">

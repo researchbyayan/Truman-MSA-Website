@@ -12,20 +12,9 @@ function initials(name: string) {
 }
 
 export function LeaderCard({ leader }: { leader: Leader }) {
-  const featured = leader.featured;
   return (
-    <div
-      className={`card flex h-full flex-col items-center text-center transition-all hover:-translate-y-1 hover:shadow-md ${
-        featured
-          ? "border-brand-200 bg-gradient-to-b from-brand-50 to-white"
-          : ""
-      }`}
-    >
-      <div
-        className={`flex h-24 w-24 items-center justify-center overflow-hidden rounded-full ring-4 ${
-          featured ? "ring-brand-200" : "ring-neutral-100"
-        }`}
-      >
+    <div className="card flex h-full flex-col items-center text-center transition-all hover:-translate-y-1 hover:shadow-md">
+      <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full ring-4 ring-neutral-100">
         {leader.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -40,13 +29,7 @@ export function LeaderCard({ leader }: { leader: Leader }) {
         )}
       </div>
 
-      <span
-        className={`mt-4 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${
-          featured
-            ? "bg-brand-700 text-white"
-            : "bg-brand-50 text-brand-700"
-        }`}
-      >
+      <span className="mt-4 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700">
         {leader.position}
       </span>
 

@@ -8,37 +8,37 @@ import { EXECUTIVE_BOARD, ADVISOR } from "@/data/leadership";
 export const metadata: Metadata = {
   title: "Leadership",
   description:
-    "Meet the MSA Executive Board serving Truman State University during the 2026–27 academic year.",
+    "Meet the MSA Executive Board serving Truman State University for the 2026-27 academic year.",
 };
 
 export default function LeadershipPage() {
+  const board = [ADVISOR, ...EXECUTIVE_BOARD];
   return (
     <>
       <PageHero
         eyebrow="Leadership"
         title="Executive Board"
-        description="Meet the students serving MSA during the 2026–27 academic year."
+        description="The students serving MSA for the 2026-27 academic year."
       />
 
-      {/* Advisor + President featured */}
       <section className="section">
         <div className="container-page">
-          <div className="grid gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-3xl">
-            <Reveal>
-              <LeaderCard leader={ADVISOR} />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <LeaderCard leader={EXECUTIVE_BOARD[0]} />
-            </Reveal>
-          </div>
-
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {EXECUTIVE_BOARD.slice(1).map((leader, i) => (
-              <Reveal key={leader.name} delay={i * 0.06}>
+          <div
+            className="-mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4 [scrollbar-width:thin]"
+            aria-label="Executive Board members"
+          >
+            {board.map((leader) => (
+              <div
+                key={leader.name}
+                className="w-64 shrink-0 snap-start sm:w-72"
+              >
                 <LeaderCard leader={leader} />
-              </Reveal>
+              </div>
             ))}
           </div>
+          <p className="mt-3 text-center text-xs text-neutral-500">
+            Scroll to see the full board.
+          </p>
         </div>
       </section>
 
