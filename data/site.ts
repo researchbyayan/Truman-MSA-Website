@@ -50,6 +50,21 @@ export const PLANNER = {
 export const CONSTITUTION_URL = "/MSA-Constitution-2025.pdf";
 
 /**
+ * Shared Google Drive folder containing MSA documents, guides, and archives.
+ * Update this if the folder is ever moved.
+ */
+export const MSA_RESOURCES_FOLDER_URL =
+  "https://drive.google.com/drive/folders/1i4yY5sZVFyKarGngFuGqadtFGkLWHDv0?usp=drive_link";
+
+/**
+ * Friday Prayer Schedule spreadsheet.
+ * Lives inside the MSA Resources Folder; link kept separate so we can point
+ * directly at it once the shareable link is finalized. Until then it points
+ * at the Resources Folder.
+ */
+export const FRIDAY_PRAYER_SCHEDULE_URL = MSA_RESOURCES_FOLDER_URL;
+
+/**
  * Jummah (Friday) prayer information.
  */
 export const JUMMAH = {

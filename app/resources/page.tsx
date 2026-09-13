@@ -5,14 +5,19 @@ import {
   Building2,
   FileText,
   CalendarRange,
-  GraduationCap,
   Mail,
   ExternalLink,
   ArrowRight,
+  FolderOpen,
 } from "lucide-react";
-import { PageHero, SectionHeading } from "@/components/section-heading";
+import { PageHero } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
-import { JUMMAH, SITE, CONSTITUTION_URL } from "@/data/site";
+import {
+  JUMMAH,
+  SITE,
+  CONSTITUTION_URL,
+  MSA_RESOURCES_FOLDER_URL,
+} from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -64,11 +69,13 @@ const resources: Resource[] = [
     cta: "Open Planner",
   },
   {
-    icon: GraduationCap,
-    title: "Campus Resources",
+    icon: FolderOpen,
+    title: "MSA Resources Folder",
     description:
-      "Prayer spaces, halal options, and support for Muslim students at Truman.",
-    comingSoon: true,
+      "Shared Google Drive with the Friday Prayer schedule, meeting notes, and other MSA documents.",
+    href: MSA_RESOURCES_FOLDER_URL,
+    cta: "Open Drive Folder",
+    external: true,
   },
   {
     icon: Mail,
@@ -78,14 +85,6 @@ const resources: Resource[] = [
     cta: "Email Us",
     external: true,
   },
-];
-
-const future = [
-  "Halal food",
-  "Prayer spaces",
-  "Ramadan resources",
-  "New Muslim resources",
-  "Local Muslim community resources",
 ];
 
 export default function ResourcesPage() {
@@ -145,27 +144,6 @@ export default function ResourcesPage() {
             ))}
           </div>
 
-          {/* Future resources */}
-          <Reveal className="mt-12">
-            <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-8">
-              <h3 className="font-display text-lg font-semibold text-neutral-900">
-                More resources on the way
-              </h3>
-              <p className="mt-1 text-sm text-neutral-500">
-                We&apos;re building out guides for:
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {future.map((f) => (
-                  <span
-                    key={f}
-                    className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-600"
-                  >
-                    {f}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
     </>
