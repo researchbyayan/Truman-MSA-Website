@@ -9,10 +9,16 @@ import {
   Mail,
   ExternalLink,
   ArrowRight,
+  FolderOpen,
 } from "lucide-react";
 import { PageHero, SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
-import { JUMMAH, SITE, CONSTITUTION_URL } from "@/data/site";
+import {
+  JUMMAH,
+  SITE,
+  CONSTITUTION_URL,
+  MSA_RESOURCES_FOLDER_URL,
+} from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -62,6 +68,15 @@ const resources: Resource[] = [
     description: "Everything MSA has planned for the semester, in one place.",
     href: "/planner",
     cta: "Open Planner",
+  },
+  {
+    icon: FolderOpen,
+    title: "MSA Resources Folder",
+    description:
+      "Shared Google Drive with the Friday Prayer schedule, meeting notes, and other MSA documents.",
+    href: MSA_RESOURCES_FOLDER_URL,
+    cta: "Open Drive Folder",
+    external: true,
   },
   {
     icon: GraduationCap,

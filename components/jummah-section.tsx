@@ -1,5 +1,5 @@
 import { Clock, MapPin, Phone, CalendarDays, ExternalLink } from "lucide-react";
-import { JUMMAH } from "@/data/site";
+import { JUMMAH, FRIDAY_PRAYER_SCHEDULE_URL } from "@/data/site";
 import { Reveal } from "@/components/reveal";
 
 export function JummahSection() {
@@ -14,6 +14,15 @@ export function JummahSection() {
           <p className="mt-4 text-lg text-neutral-600">
             Looking for Friday prayer? Here&apos;s everything you need.
           </p>
+          <a
+            href={FRIDAY_PRAYER_SCHEDULE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-900 hover:underline"
+          >
+            Friday Prayer Schedule
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
