@@ -100,3 +100,22 @@ export const NAV_LINKS = [
   { label: "Resources", href: "/resources" },
   { label: "Get Involved", href: "/get-involved" },
 ];
+
+/**
+ * Anonymous feedback form.
+ * Submissions are emailed to these recipients. Any future exec can edit this
+ * list without touching component code. These are NOT secrets.
+ *
+ * Email is sent through Gmail SMTP. The Gmail credentials live in environment
+ * variables (set in Vercel), never in this repo:
+ *   GMAIL_USER          – the Gmail address that sends (e.g. trumanmsa@gmail.com)
+ *   GMAIL_APP_PASSWORD  – a 16-character Gmail App Password (NOT the login password)
+ *   FEEDBACK_FROM_NAME  – (optional) sender display name; defaults to below
+ */
+export const FEEDBACK = {
+  recipients: ["kafi@truman.edu", "es65721@truman.edu"],
+  // Display name shown as the sender. The actual sending address is always the
+  // GMAIL_USER account (Gmail requires the From to match the authenticated
+  // account). Override the name with the FEEDBACK_FROM_NAME env var if you like.
+  fromName: "Truman MSA Website",
+};
