@@ -49,6 +49,14 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/feedback"
+                className="text-neutral-400 transition-colors hover:text-white"
+              >
+                Anonymous Feedback
+              </Link>
+            </li>
           </ul>
         </div>
 
