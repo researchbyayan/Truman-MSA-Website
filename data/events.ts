@@ -44,22 +44,14 @@ export const UPCOMING_EVENTS: MSAEvent[] = [
     location: "Interfaith Center · SUB Down Under",
   },
   {
-    id: "gen-body-sep-6",
+    id: "gen-body-sep-20",
     title: "General Body Meeting",
     category: "Community",
     description:
       "Open to all members, updates, plans, and community. Come meet everyone.",
-    date: "2026-09-06",
-    time: "8:30 PM",
+    date: "2026-09-20",
+    time: "8:30 – 9:30 PM",
     location: "VH 1010",
-  },
-  {
-    id: "brotherhood-week",
-    title: "Brotherhood Week",
-    category: "Social",
-    description:
-      "A week of gatherings and activities building community among the brothers.",
-    date: "2026-09-13",
   },
   {
     id: "fundraising-week",
@@ -77,6 +69,14 @@ export const UPCOMING_EVENTS: MSAEvent[] = [
     date: "2026-10-18",
     time: "7:00 – 9:00 PM",
     location: "TBA",
+  },
+  {
+    id: "brotherhood-week",
+    title: "Brotherhood Week",
+    category: "Social",
+    description:
+      "A week of gatherings and activities building community among the brothers.",
+    date: "2026-11-01",
   },
   {
     id: "sisterhood-week",
